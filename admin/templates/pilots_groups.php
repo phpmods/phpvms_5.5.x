@@ -44,20 +44,3 @@ if($total == 0) {
 	return;
 }
 ?>
-<form id="pilotgroupform" action="<?php echo adminaction('/pilotadmin/viewpilots');?>" method="post">
-<dl>
-	<dt>Select Group:</dt>
-	<dd><select name="groupname">
-		<?php
-			foreach($freegroups as $group) {
-				echo '<option value="'.$group.'">'.$group.'</option>';
-			}
-		?>
-		</select></dd>
-
-	<dt></dt>
-	<dd><input type="hidden" name="pilotid" value="<?php echo $pilotid;?>" />
-		<input type="hidden" name="action" value="addgroup" />
-		<input type="submit" name="submit" value="Add to Group" /></dd>
-</dl>
-</form>
